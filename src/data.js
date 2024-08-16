@@ -337,7 +337,6 @@ const data = [
     image: scene9,
     comments: [],
   },
-  // New objects added below
   {
     id: 7,
     name: "Tom",
