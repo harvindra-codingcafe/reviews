@@ -75,13 +75,48 @@
         img {
           visibility: visible;
           opacity: 1;
+          margin: 0 auto;
         }
+      }
+    }
+  }
+  ul.slick-dots {
+    position: unset;
+    margin: 0 auto;
+  }
+  button.slick-arrow {
+    top: 100%;
+    right: 35px;
+    left: unset;
+    background: #052e95;
+    border-radius: 100%;
+    &:before {
+      content: " ";
+      width: 9px;
+      height: 9px;
+      display: block;
+      border-right: solid 2px #fff;
+      border-bottom: solid 2px #fff;
+      transform: rotate(135deg);
+      left: 7px;
+      position: absolute;
+      top: 6px;
+      opacity: 1;
+    }
+    &.slick-next {
+      right: 0;
+      left: unset;
+      &:before {
+        transform: rotate(-45deg);
+        top: 5px;
+        left: 4px;
       }
     }
   }
 }
 .left_bar {
   &-single {
+    margin-right: 7px;
     &:hover {
       border: 7px solid #176efd;
       position: relative;
@@ -122,9 +157,37 @@
       }
     }
   }
+  button.slick-arrow {
+    top: -20px;
+    right: unset;
+    left: 35%;
+    background: #052e95;
+    border-radius: 100%;
+    &:before {
+      content: " ";
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-right: solid 2px #fff;
+      border-bottom: solid 2px #fff;
+      transform: rotate(-135deg);
+      left: 5px;
+      position: absolute;
+      top: 7px;
+      opacity: 1;
+    }
+    &.slick-next {
+      right: 35%;
+      left: unset;
+      &:before {
+        transform: rotate(45deg);
+        top: 4px;
+      }
+    }
+  }
 }
 
 .all_comments {
-  max-height: 600px;
+  max-height: 490px;
   overflow: auto;
 }
