@@ -17,6 +17,7 @@ const data = [
     id: 1,
     name: "John Doe",
     image: scene1,
+    duration: "00:23",
     comments: [
       {
         id: 1,
@@ -114,6 +115,7 @@ const data = [
     id: 2,
     name: "Jane Smith",
     image: scene2,
+    duration: "00:35",
     comments: [
       {
         id: 1,
@@ -135,6 +137,7 @@ const data = [
     id: 3,
     name: "Sam",
     image: scene3,
+    duration: "00:25",
     comments: [
       {
         id: 1,
@@ -232,12 +235,14 @@ const data = [
     id: 4,
     name: "Lilly",
     image: scene7,
+    duration: "00:22",
     comments: [],
   },
   {
     id: 5,
     name: "Dania",
     image: scene8,
+    duration: "00:13",
     comments: [
       {
         id: 1,
@@ -335,12 +340,14 @@ const data = [
     id: 6,
     name: "Honey",
     image: scene9,
+    duration: "00:28",
     comments: [],
   },
   {
     id: 7,
     name: "Tom",
     image: scene10,
+    duration: "00:27",
     comments: [
       {
         id: 1,
@@ -361,6 +368,7 @@ const data = [
     id: 8,
     name: "Alice",
     image: scene11,
+    duration: "00:16",
     comments: [
       {
         id: 1,
@@ -381,6 +389,7 @@ const data = [
     id: 9,
     name: "Bob",
     image: scene12,
+    duration: "00:10",
     comments: [
       {
         id: 1,
@@ -478,12 +487,14 @@ const data = [
     id: 10,
     name: "Chris",
     image: scene13,
+    duration: "00:29",
     comments: [],
   },
   {
     id: 11,
     name: "Eve",
     image: scene14,
+    duration: "00:05",
     comments: [
       {
         id: 1,
@@ -504,6 +515,7 @@ const data = [
     id: 12,
     name: "Jack",
     image: scene15,
+    duration: "00:37",
     comments: [
       {
         id: 1,

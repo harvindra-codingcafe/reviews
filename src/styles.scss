@@ -116,10 +116,19 @@
 }
 .left_bar {
   &-single {
+    position: relative;
     margin-right: 7px;
+    background: #000;
+    h4 {
+      font-size: 16px;
+      z-index: 1;
+    }
+    img {
+      opacity: 0.7;
+      object-fit: cover;
+    }
     &:hover {
       border: 7px solid #176efd;
-      position: relative;
       cursor: pointer;
       &:after {
         content: "";
