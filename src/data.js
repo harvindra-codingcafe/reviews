@@ -15,7 +15,7 @@ import scene15 from "./assets/images/9.png";
 const data = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Michael Smith, Emily Johnson, James Brown",
     image: scene1,
     duration: "00:23",
     comments: [
@@ -113,7 +113,7 @@ const data = [
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Olivia Williams, William Jones, Sophia Miller",
     image: scene2,
     duration: "00:35",
     comments: [
@@ -135,7 +135,7 @@ const data = [
   },
   {
     id: 3,
-    name: "Sam",
+    name: "John Davis, Isabella Garcia, David Wilson",
     image: scene3,
     duration: "00:25",
     comments: [
@@ -233,14 +233,14 @@ const data = [
   },
   {
     id: 4,
-    name: "Lilly",
+    name: "Emma Taylor, Daniel White, Grace Thompson",
     image: scene7,
     duration: "00:22",
     comments: [],
   },
   {
     id: 5,
-    name: "Dania",
+    name: "Christopher Harris, Megan Clark, Matthew Lewis",
     image: scene8,
     duration: "00:13",
     comments: [
@@ -338,14 +338,14 @@ const data = [
   },
   {
     id: 6,
-    name: "Honey",
+    name: "Sarah Robinson, Andrew Walker, Natalie Young",
     image: scene9,
     duration: "00:28",
     comments: [],
   },
   {
     id: 7,
-    name: "Tom",
+    name: "Joshua Allen, Victoria King, Benjamin Wright",
     image: scene10,
     duration: "00:27",
     comments: [
@@ -366,7 +366,7 @@ const data = [
   },
   {
     id: 8,
-    name: "Alice",
+    name: "Lauren Scott, Alexander Mitchell, Hannah Green",
     image: scene11,
     duration: "00:16",
     comments: [
@@ -387,7 +387,7 @@ const data = [
   },
   {
     id: 9,
-    name: "Bob",
+    name: "Ryan Adams, Abigail Baker, Nathan Parker",
     image: scene12,
     duration: "00:10",
     comments: [
@@ -485,14 +485,14 @@ const data = [
   },
   {
     id: 10,
-    name: "Chris",
+    name: "Samantha Evans, Jonathan Rivera, Charlotte Carter",
     image: scene13,
     duration: "00:29",
     comments: [],
   },
   {
     id: 11,
-    name: "Eve",
+    name: "Ethan Turner, Lily Campbell, Jacob Hill",
     image: scene14,
     duration: "00:05",
     comments: [
@@ -513,7 +513,7 @@ const data = [
   },
   {
     id: 12,
-    name: "Jack",
+    name: "Chloe Ward, Henry Morris, Ava Peterson",
     image: scene15,
     duration: "00:37",
     comments: [
