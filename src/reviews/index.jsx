@@ -162,6 +162,21 @@ const CommentSection = () => {
                                 className="w-100"
                                 alt={item.name}
                               />
+                              <h4
+                                data-tooltip-id="my-tooltip"
+                                data-tooltip-content={item.name}
+                                data-tooltip-place="top"
+                                className="position-absolute text-white top-0 start-0 z-1 m-2"
+                              >
+                                Creators <i class="fa fa-info-circle"></i>
+                              </h4>
+
+                              <span className="position-absolute text-white bottom-0 start-0 z-1 m-2">
+                                #{index + 1}
+                              </span>
+                              <span className="position-absolute text-white bottom-0 end-0 z-1 m-2">
+                                {item.duration}
+                              </span>
                             </div>
                           </div>
                           <div>
@@ -177,6 +192,21 @@ const CommentSection = () => {
                                 className="w-100"
                                 alt={item.name}
                               />
+                              <h4
+                                data-tooltip-id="my-tooltip"
+                                data-tooltip-content={item.name}
+                                data-tooltip-place="top"
+                                className="position-absolute text-white top-0 start-0 z-1 m-2"
+                              >
+                                Creators <i class="fa fa-info-circle"></i>
+                              </h4>
+
+                              <span className="position-absolute text-white bottom-0 start-0 z-1 m-2">
+                                #{index + 1}
+                              </span>
+                              <span className="position-absolute text-white bottom-0 end-0 z-1 m-2">
+                                {item.duration}
+                              </span>
                             </div>
                           </div>
                         </Slider>
