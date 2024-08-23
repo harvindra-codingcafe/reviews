@@ -129,23 +129,23 @@
       height: 160px;
       object-fit: cover;
     }
-    &:hover {
-      border: 7px solid #176efd;
-      cursor: pointer;
-      &:after {
-        content: "";
-        background: #176efd;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transition: 0.2s all;
-        right: -12px;
-        top: 50%;
-        transform: translate(0, -50%) rotate(45deg);
-        border-top: solid 4px #176efd;
-        border-right: solid 4px #176efd;
-      }
-    }
+    // &:hover {
+    //   border: 7px solid #176efd;
+    //   cursor: pointer;
+    //   &:after {
+    //     content: "";
+    //     background: #176efd;
+    //     width: 10px;
+    //     height: 10px;
+    //     position: absolute;
+    //     transition: 0.2s all;
+    //     right: -12px;
+    //     top: 50%;
+    //     transform: translate(0, -50%) rotate(45deg);
+    //     border-top: solid 4px #176efd;
+    //     border-right: solid 4px #176efd;
+    //   }
+    // }
     img {
       transition: 0.2s all;
     }
