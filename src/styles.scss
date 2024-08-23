@@ -129,9 +129,10 @@
       height: 160px;
       object-fit: cover;
     }
-    // &:hover {
+    &:hover {
+      cursor: pointer;
+    }
     //   border: 7px solid #176efd;
-    //   cursor: pointer;
     //   &:after {
     //     content: "";
     //     background: #176efd;
