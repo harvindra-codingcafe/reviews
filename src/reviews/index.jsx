@@ -4,6 +4,7 @@ import CommentForm from "./CommentForm";
 import Slider from "react-slick";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
+import scene1 from "../assets/images/scene1-color.jpg";
 
 const CommentSection = () => {
   const [data, setData] = useState([]);
@@ -65,23 +66,33 @@ const CommentSection = () => {
     sideSliderRef.current.slickGoTo(index);
   };
 
+  useEffect(() => {
+    if (data && data.length > 0) {
+      setSelectedData(data[0]);
+    }
+  }, [data]);
+
   var settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 7,
+    slidesToShow: 4,
     draggable: true,
-    centerMode: false,
+    centerMode: true,
     beforeChange: (current, next) => handleSlideChange(next), // Track slide changes
   };
 
   var settings2 = {
     dots: false,
     infinite: true,
-    draggable: true,
-    slidesToShow: 5,
-    centerMode: false,
+    draggable: false,
+    slidesToShow: 4,
+    centerMode: true,
     vertical: true,
     beforeChange: (current, next) => handleSlideChange(next), // Track slide changes
+    afterChange: (currentIndex) => {
+      const activeItem = data[currentIndex];
+      setSelectedData(activeItem);
+    },
   };
   var settings3 = {
     dots: true,
@@ -114,7 +125,7 @@ const CommentSection = () => {
       <div className="container">
         <div className="m-0 top_bar">
           <Slider {...settings} ref={topSliderRef}>
-            {data?.map((item) => (
+            {data.map((item, index) => (
               <div className="top_bar-single text-center p-0" key={item.id}>
                 <div className="bg-dark py-2">
                   <span
@@ -146,78 +157,67 @@ const CommentSection = () => {
               <div ref={sideSliderDOMRef}>
                 <Slider {...settings2} ref={sideSliderRef}>
                   {data?.map((item, index) =>
-                    index === 0 || index === 1 ? (
-                      // Render the first two items in a separate slider
-                      index === 0 ? (
-                        <div key={item.id}>
-                          <Slider {...settings3}>
-                            <div>
-                              <div
-                                className={`left_bar-single ${
-                                  selectedData?.id === item.id ? "selected" : ""
-                                }`}
+                    index === 0 ? (
+                      <div key={item.id}>
+                        <Slider {...settings3}>
+                          <div>
+                            <div
+                              className={`left_bar-single ${
+                                selectedData?.id === item.id ? "selected" : ""
+                              }`}
+                            >
+                              <img
+                                onClick={() => setSelectedData(item)}
+                                src={item.image}
+                                className="w-100"
+                                alt={item.name}
+                              />
+                              <h4
+                                data-tooltip-id="my-tooltip"
+                                data-tooltip-content={item.name}
+                                data-tooltip-place="top"
+                                className="position-absolute text-white top-0 start-0 z-1 m-2"
                               >
-                                <img
-                                  onClick={() => setSelectedData(item)}
-                                  onMouseEnter={() => setSelectedData(item)}
-                                  src={item.image}
-                                  className="w-100"
-                                  alt={item.name}
-                                />
-                                <h4
-                                  data-tooltip-id="my-tooltip"
-                                  data-tooltip-content={item.name}
-                                  data-tooltip-place="top"
-                                  className="position-absolute text-white top-0 start-0 z-1 m-2"
-                                >
-                                  Creators <i class="fa fa-info-circle"></i>
-                                </h4>
-                                <span className="position-absolute text-white bottom-0 start-0 z-1 m-2">
-                                  #{index + 1}
-                                </span>
-                                <span className="position-absolute text-white bottom-0 end-0 z-1 m-2">
-                                  {item.duration}
-                                </span>
-                              </div>
+                                Creators <i class="fa fa-info-circle"></i>
+                              </h4>
+                              <span className="position-absolute text-white bottom-0 start-0 z-1 m-2">
+                                #{index + 1}
+                              </span>
+                              <span className="position-absolute text-white bottom-0 end-0 z-1 m-2">
+                                {item.duration}
+                              </span>
                             </div>
-                            {data[1] && (
-                              <div key={data[1].id}>
-                                <div
-                                  className={`left_bar-single ${
-                                    selectedData?.id === data[1].id
-                                      ? "selected"
-                                      : ""
-                                  }`}
-                                >
-                                  <img
-                                    onClick={() => setSelectedData(data[1])}
-                                    onMouseEnter={() =>
-                                      setSelectedData(data[1])
-                                    }
-                                    src={data[1].image}
-                                    className="w-100"
-                                    alt={data[1].name}
-                                  />
-                                  <h4
-                                    data-tooltip-id="my-tooltip"
-                                    data-tooltip-content={data[1].name}
-                                    data-tooltip-place="top"
-                                    className="position-absolute text-white top-0 start-0 z-1 m-2"
-                                  >
-                                    Creators <i class="fa fa-info-circle"></i>
-                                  </h4>
-                                  <span className="position-absolute text-white bottom-0 start-0 z-1 m-2">
-                                    #2
-                                  </span>
-                                  <span className="position-absolute text-white bottom-0 end-0 z-1 m-2">
-                                    {data[1].duration}
-                                  </span>
-                                </div>
-                              </div>
-                            )}
-                          </Slider>
-                        </div>
-                      ) : null
+                          </div>
+                          <div key={item.id}>
+                            <div
+                              className={`left_bar-single ${
+                                selectedData?.id === item.id ? "selected" : ""
+                              }`}
+                            >
+                              <img
+                                onClick={() => setSelectedData(item)}
+                                src={scene1}
+                                className="w-100"
+                                alt={item.name}
+                              />
+                              <h4
+                                data-tooltip-id="my-tooltip"
+                                data-tooltip-content={item.name}
+                                data-tooltip-place="top"
+                                className="position-absolute text-white top-0 start-0 z-1 m-2"
+                              >
+                                Creators <i class="fa fa-info-circle"></i>
+                              </h4>
+                              <span className="position-absolute text-white bottom-0 start-0 z-1 m-2">
+                                #2
+                              </span>
+                              <span className="position-absolute text-white bottom-0 end-0 z-1 m-2">
+                                {item.duration}
+                              </span>
+                            </div>
+                          </div>
+                        </Slider>
+                      </div>
                     ) : (
                       <div key={item.id}>
                         <div
@@ -227,7 +227,6 @@ const CommentSection = () => {
                         >
                           <img
                             onClick={() => setSelectedData(item)}
-                            onMouseEnter={() => setSelectedData(item)}
                             src={item.image}
                             className="w-100"
                             alt={item.name}

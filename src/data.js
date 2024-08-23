@@ -1,4 +1,3 @@
-import scene1 from "./assets/images/scene1-color.jpg";
 import scene2 from "./assets/images/scene1.jpg";
 import scene3 from "./assets/images/scene2-color.jpg";
 
@@ -16,7 +15,7 @@ const data = [
   {
     id: 1,
     name: "Michael Smith, Emily Johnson, James Brown",
-    image: scene1,
+    image: scene2,
     duration: "00:23",
     comments: [
       {
@@ -113,28 +112,6 @@ const data = [
   },
   {
     id: 2,
-    name: "Olivia Williams, William Jones, Sophia Miller",
-    image: scene2,
-    duration: "00:35",
-    comments: [
-      {
-        id: 1,
-        name: "Monica",
-        time: "1h ago",
-        content:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      },
-      {
-        id: 4,
-        name: "Honey",
-        time: "May 15",
-        content:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,",
-      },
-    ],
-  },
-  {
-    id: 3,
     name: "John Davis, Isabella Garcia, David Wilson",
     image: scene3,
     duration: "00:25",
@@ -232,14 +209,14 @@ const data = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: "Emma Taylor, Daniel White, Grace Thompson",
     image: scene7,
     duration: "00:22",
     comments: [],
   },
   {
-    id: 5,
+    id: 4,
     name: "Christopher Harris, Megan Clark, Matthew Lewis",
     image: scene8,
     duration: "00:13",
@@ -337,14 +314,14 @@ const data = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     name: "Sarah Robinson, Andrew Walker, Natalie Young",
     image: scene9,
     duration: "00:28",
     comments: [],
   },
   {
-    id: 7,
+    id: 6,
     name: "Joshua Allen, Victoria King, Benjamin Wright",
     image: scene10,
     duration: "00:27",
@@ -365,7 +342,7 @@ const data = [
     ],
   },
   {
-    id: 8,
+    id: 7,
     name: "Lauren Scott, Alexander Mitchell, Hannah Green",
     image: scene11,
     duration: "00:16",
@@ -386,7 +363,7 @@ const data = [
     ],
   },
   {
-    id: 9,
+    id: 8,
     name: "Ryan Adams, Abigail Baker, Nathan Parker",
     image: scene12,
     duration: "00:10",
@@ -484,14 +461,14 @@ const data = [
     ],
   },
   {
-    id: 10,
+    id: 9,
     name: "Samantha Evans, Jonathan Rivera, Charlotte Carter",
     image: scene13,
     duration: "00:29",
     comments: [],
   },
   {
-    id: 11,
+    id: 10,
     name: "Ethan Turner, Lily Campbell, Jacob Hill",
     image: scene14,
     duration: "00:05",
@@ -512,7 +489,7 @@ const data = [
     ],
   },
   {
-    id: 12,
+    id: 11,
     name: "Chloe Ward, Henry Morris, Ava Peterson",
     image: scene15,
     duration: "00:37",
