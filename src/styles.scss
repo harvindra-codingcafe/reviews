@@ -65,15 +65,19 @@
     img {
       height: 40px;
       object-fit: contain;
-      visibility: hidden;
+      // visibility: hidden;
       opacity: 0;
+      &.selected {
+        opacity: 1;
+        // visibility: visible;
+      }
     }
     span {
-      cursor: pointer;
-      &:hover,
-      &.selected {
-        img {
-          visibility: visible;
+      img {
+        cursor: pointer;
+        &:hover,
+        &.selected {
+          // visibility: visible;
           opacity: 1;
           margin: 0 auto;
         }
@@ -81,15 +85,17 @@
     }
   }
   ul.slick-dots {
-    position: unset;
+    position: absolute;
     margin: 0 auto;
+    top: 51px;
   }
   button.slick-arrow {
-    top: 100%;
+    bottom: -49px;
     right: 35px;
     left: unset;
     background: #052e95;
     border-radius: 100%;
+    top: unset;
     &:before {
       content: " ";
       width: 9px;

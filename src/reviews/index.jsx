@@ -74,7 +74,7 @@ const CommentSection = () => {
 
   var settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     draggable: true,
     centerMode: true,
@@ -83,7 +83,7 @@ const CommentSection = () => {
 
   var settings2 = {
     dots: false,
-    infinite: true,
+    infinite: false,
     draggable: false,
     slidesToShow: 4,
     centerMode: true,
@@ -124,32 +124,36 @@ const CommentSection = () => {
       </div>
       <div className="container">
         <div className="m-0 top_bar">
-          <Slider {...settings} ref={topSliderRef}>
-            {data.map((item, index) => (
-              <div className="top_bar-single text-center p-0" key={item.id}>
-                <div className="bg-dark py-2">
-                  <span
-                    className={`w-100 d-block py-1 ${
-                      selectedData?.id === item.id ? "selected" : ""
-                    }`}
-                    onClick={() => setSelectedData(item)}
-                    style={{
-                      borderTop: "2px dashed #fff",
-                      borderBottom: "2px dashed #fff",
-                    }}
-                  >
-                    <span className="d-block bg-success">
+          <div className="top_bar-single text-center p-0">
+            <div className="bg-dark py-2">
+              <span
+                className={`w-100 d-block py-1`}
+                style={{
+                  borderTop: "2px dashed #fff",
+                  borderBottom: "2px dashed #fff",
+                }}
+              >
+                <span className="d-block bg-success">
+                  <Slider {...settings} ref={topSliderRef}>
+                    {data.map((item, index) => (
                       <img
+                        key={item.id}
+                        onClick={() => setSelectedData(item)}
+                        className={`mw-100 ${
+                          selectedData?.id === item.id ? "selected" : ""
+                        }`}
                         src={item.image}
-                        className="mw-100"
                         alt={item.name}
                       />
-                    </span>
-                  </span>
-                </div>
-              </div>
-            ))}
-          </Slider>
+                    ))}
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </Slider>
+                </span>
+              </span>
+            </div>
+          </div>
         </div>
         <div>
           <div className="row h-100 mt-4 pt-2">
@@ -157,24 +161,24 @@ const CommentSection = () => {
               <div ref={sideSliderDOMRef}>
                 <Slider {...settings2} ref={sideSliderRef}>
                   {data?.map((item, index) =>
-                    index === 0 ? (
+                    item.stage ? (
                       <div key={item.id}>
                         <Slider {...settings3}>
-                          <div>
+                          {item.stage?.map((stage, i) => (
                             <div
                               className={`left_bar-single ${
-                                selectedData?.id === item.id ? "selected" : ""
+                                selectedData?.id === stage.id ? "selected" : ""
                               }`}
                             >
                               <img
                                 onClick={() => setSelectedData(item)}
-                                src={item.image}
+                                src={stage.image}
                                 className="w-100"
-                                alt={item.name}
+                                alt={stage.name}
                               />
                               <h4
                                 data-tooltip-id="my-tooltip"
-                                data-tooltip-content={item.name}
+                                data-tooltip-content={stage.name}
                                 data-tooltip-place="top"
                                 className="position-absolute text-white top-0 start-0 z-1 m-2"
                               >
@@ -184,38 +188,10 @@ const CommentSection = () => {
                                 #{index + 1}
                               </span>
                               <span className="position-absolute text-white bottom-0 end-0 z-1 m-2">
-                                {item.duration}
+                                {stage.duration}
                               </span>
                             </div>
-                          </div>
-                          <div key={item.id}>
-                            <div
-                              className={`left_bar-single ${
-                                selectedData?.id === item.id ? "selected" : ""
-                              }`}
-                            >
-                              <img
-                                onClick={() => setSelectedData(item)}
-                                src={scene1}
-                                className="w-100"
-                                alt={item.name}
-                              />
-                              <h4
-                                data-tooltip-id="my-tooltip"
-                                data-tooltip-content={item.name}
-                                data-tooltip-place="top"
-                                className="position-absolute text-white top-0 start-0 z-1 m-2"
-                              >
-                                Creators <i class="fa fa-info-circle"></i>
-                              </h4>
-                              <span className="position-absolute text-white bottom-0 start-0 z-1 m-2">
-                                #2
-                              </span>
-                              <span className="position-absolute text-white bottom-0 end-0 z-1 m-2">
-                                {item.duration}
-                              </span>
-                            </div>
-                          </div>
+                          ))}
                         </Slider>
                       </div>
                     ) : (
@@ -250,6 +226,9 @@ const CommentSection = () => {
                       </div>
                     )
                   )}
+                  <div></div>
+                  <div></div>
+                  <div></div>
                 </Slider>
               </div>
             </div>
